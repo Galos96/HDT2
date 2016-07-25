@@ -33,11 +33,11 @@ public class PilaTest {
     @Test
     public void testSetVec() {
         System.out.println("setVec");
-        Vector vecto = null;
-        Pila instance = new Pila();
-        instance.setVec(vecto);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Vector vecto = new Vector(20,5); //Se crea un vector nuevo
+        Pila instance = new Pila(); //Se inicia un objeto
+        instance.setVec(vecto); //Se envia el vector al objeto
+        Vector result = instance.getVec(); //Se extrae el valor real
+        assertEquals(vecto, result); //Se comparan los valores
     }
 
     /**
@@ -46,12 +46,10 @@ public class PilaTest {
     @Test
     public void testGetVec() {
         System.out.println("getVec");
-        Pila instance = new Pila();
-        Vector expResult = [];
-        Vector result = instance.getVec();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Pila instance = new Pila(); //Instancia el objeto
+        Vector expResult = new Vector(20,5); //Pongo mi valor esperado
+        Vector result = instance.getVec(); //Obtengo el valor real
+        assertEquals(expResult, result); //Se comparan los valores
     }
 
     /**
@@ -60,11 +58,9 @@ public class PilaTest {
     @Test
     public void testPush() {
         System.out.println("push");
-        String num = "";
-        Pila instance = new Pila();
-        instance.push(num);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String num = "1"; //Se coloca el valor "1"
+        Pila instance = new Pila(); //Instancia el objeto
+        instance.push(num); //Se hace push al valor 
     }
 
     /**
@@ -73,12 +69,11 @@ public class PilaTest {
     @Test
     public void testPop() {
         System.out.println("pop");
-        Pila instance = new Pila();
-        String expResult = "";
-        String result = instance.pop();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Pila instance = new Pila(); //Instancia el objeto
+        instance.push("1"); //Se hace push al valor "1"
+        String expResult = "1"; //Se coloca el valor que se espera
+        String result = instance.pop(); //Se obtiene el valor real
+        assertEquals(expResult, result); //Se comparan los valores
     }
     
 }

@@ -36,8 +36,8 @@ public class Menu {
                 String c;
                 Lector lec = new Lector();
                 // Recuerde cambiar la dirección de su archivo de texto con el siguiente formatocde ejemplo
-                text= lec.leer("C:\\Users\\Diego Valdez\\Desktop\\datos.txt");
-                for (int i=0; i <= text.length()-1; i++){
+                text= lec.leer("E:\\RASS\\Escritorio\\datos.txt");
+                for(int i=0; i <= text.length()-1; i++){
                     c = ""+ text.charAt(i); 
                     if ((!c.equals("*") )&& (!c.equals("/"))&& (!c.equals("+"))&& (!c.equals("-"))){
                         if (!c.equals(" ") ){
